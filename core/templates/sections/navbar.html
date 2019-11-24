@@ -1,17 +1,29 @@
 <nav>
+    <a id="logo-navbar"> <img> </a>
     <ul class="categorias">
         <li>
-            <a id="inicio">Início</a>
+            <a href="/inicio" id="inicio">Início</a>
         </li>
         <li>
-            <a id="sobreNos">Sobre nós</a>
+            <a href="/sobreNos" id="sobreNos">Sobre nós</a>
         </li>
         <li>
-            <a id="servicos">Serviços</a>
+            <a href="/servicos" id="servicos">Serviços</a>
         </li>
         <li>
-            <a id="contato">Contato</a>
+            <a href="/contato" id="contato">Contato</a>
         </li>
     </ul>
-    <label class="icone-menu"></label>
+    <a id="menu-barras" onclick="rotateButtonFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </a>
 </nav>
+
+<!--COLOCAR FUNCAO NO .JS-->
+<script>
+function rotateButtonFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
