@@ -1,0 +1,12 @@
+nav {
+    background-color: cadetblue;
+    position: relative;
+}
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+}
+nav ul li {
+    
+}
