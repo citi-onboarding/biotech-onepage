@@ -2,35 +2,35 @@
     <a id="logo-navbar" href="banner.html"> <img src="static\img\Logo_Branca1.png"> </a>
     <ul class="categorias">
         <li>
-            <a href="banner.html" id="inicio">Início</a>
+            <a href="banner.html" id="inicioNav">Início</a>
         </li>
         <li>
-            <a href="sobre.html" id="sobreNos">Sobre nós</a>
+            <a href="sobre.html" id="sobreNosNav">Sobre nós</a>
         </li>
         <li>
-            <a href="servicos.html" id="servicos">Serviços</a>
+            <a href="servicos.html" id="servicosNav">Serviços</a>
         </li>
         <li>
-            <a href="contato.html" id="contato">Contato</a>
+            <a href="contato.html" id="contatoNav">Contato</a>
         </li>
         <li>
             <div id="menu-barras" onclick="rotateButtonFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>  
-                <div class="menu" id="dropdown">
+                <div class="" id="dropdown">
                     <ul>
                         <li>
-                            <a href="banner.html" id="inicio">Início</a>
+                            <a href="banner.html" id="inicioMenu">Início</a>
                         </li>
                         <li>
-                            <a href="sobre.html" id="sobreNos">Sobre nós</a>
+                            <a href="sobre.html" id="sobreNosMenu">Sobre nós</a>
                         </li>
                         <li>
-                            <a href="servicos.html" id="servicos">Serviços</a>
+                            <a href="servicos.html" id="servicosMenu">Serviços</a>
                         </li>
                         <li>
-                            <a href="contato.html" id="contato">Contato</a>
+                            <a href="contato.html" id="contatoMenu">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -43,15 +43,15 @@
 <script>
 function rotateButtonFunction(x) {
   x.classList.toggle("change");
-  document.getElementById("dropdown").classList.toggle("show");
+  document.getElementById("dropdown").classList.toggle("change");
 }
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav").style.opacity = "10%";
+    document.getElementsByClassName("categorias").style.opacity = "10%";
   } else {
-    document.getElementById("nav").style.opacity = "100%";
+    document.getElementsByClassName("categorias").style.opacity = "100%";
   }
   prevScrollpos = currentScrollPos;
 }
