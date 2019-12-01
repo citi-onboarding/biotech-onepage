@@ -9,6 +9,6 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         
-        context["mvv"] = MVV.objects.last()
+        context["mvv"] = MVV.objects.get()
 
         return context
