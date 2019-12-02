@@ -133,8 +133,9 @@ MEDIA_URL = '/media/'
 
 # Dropbox Config
 
-# DROPBOX_ROOT_PATH = 'media'
-# DROPBOX_TIMEOUT = 100
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
+DROPBOX_TIMEOUT = 100
 
 #Templated email config
 
@@ -147,6 +148,3 @@ EMAIL_PORT = 587
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = env('EMAIL_HOST_ACCOUNT')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-
-DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
