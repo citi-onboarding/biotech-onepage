@@ -1,3 +1,161 @@
+/* #######  BANNER ######### */
+#banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+}
+
+#banner-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.banner-carousel-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0, .95), rgb(255, 171, 62, 0.3)) ;
+    opacity: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+
+.banner-text {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.banner-text h1 {
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+    font-size: 5rem;
+    color: #FF914D;
+    margin-left: 5%;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    width: 50%;
+}
+
+.banner-text p {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin-left: 5%;
+    margin-bottom: auto;
+    width: 50%;
+    font-weight: bold;
+}
+
+.banner-content img {
+    min-height: 100%;
+}
+
+.slick-slider {
+    -webkit-user-select: text!important;
+    -khtml-user-select: text!important;
+    -moz-user-select: text!important;
+    -ms-user-select: text!important;
+    user-select: text!important;
+}
+.slick-list.draggable {
+    -webkit-user-select: none!important;
+    -khtml-user-select: none!important;
+    -moz-user-select: none!important;
+    -ms-user-select: none!important;
+    user-select: none!important;
+}
+
+.slick-track{
+    width: 100%;
+    height: 100vh;
+  }
+
+.slick-dots{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: max-content;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 8%;
+    right: 10%;
+    z-index: 5;
+}
+
+.slick-dots button{
+    -webkit-appearance: none;
+    width: 50px;
+    height: 6px;
+    border: none;
+    /* border-radius: 50%; */
+    font-size: 0;
+    background-color: white;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+    outline: none;
+}
+
+.slick-active button{
+    -webkit-appearance: none;
+    background-color: #4DBBFF;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.4);
+}
+
+.slick-arrow {
+    bottom: 14%;
+}
+
+.slick-next {
+    right: 10%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    /* bottom: 0; */
+    z-index: 10;
+    background: url('../icons/next.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.slick-prev{
+    right: 15%;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    /* bottom: 0; */
+    z-index: 10;
+    background: url('../icons/prev.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 /* #######  SOBRE ######### */
 
 #sobre {

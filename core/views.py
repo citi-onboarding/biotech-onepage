@@ -16,6 +16,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         
         context["mvv"] = MVV.objects.last()
+        context["banner"] = Banner.objects.all()
 
         return context
 
