@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import IndexView
+
+from core.views import *
+
+admin.site.site_header = 'Biotech Consultoria - ADMIN'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view(), name='index'),
+    path('contact/', send_email, name='send_email'),
 ]

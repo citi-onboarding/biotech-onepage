@@ -1,3 +1,5 @@
+/* #######  SOBRE ######### */
+
 #sobre {
     display: flex;
     flex-direction: column;
@@ -90,5 +92,242 @@
 
     .card-mvv p {
         width: 80%;
+    }
+}
+
+/* #######  CONTATO ######### */
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 100vh;
+    background-color: white;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    padding: 70px 0;
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#contato .logo-detail {
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    opacity: 0.04;
+    height: 135%;
+    pointer-events: none;
+    animation: logo-animation 60s infinite alternate;
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#contato > .line-detail {
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+#contato > h2 {
+    color: #6C6D6D;
+    font-size: 2rem;
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 30px;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+
+.contact-companies {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.contact-companies > img:first-child {
+    width: 100%;
+    max-width: 270px;
+}
+
+.contact-companies p {
+    color: #6C6D6D;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+    margin-right: auto;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners img{
+    width: 100%;
+    max-width: 60px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 100%;
+    margin: auto 0;
+    padding-top: 20px;
+    z-index: 5;
+}
+
+.contact-container form input, textarea {
+    border: none;
+    border-bottom: 3px solid #FF914D;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    outline: none;
+    color: #6C6D6D;
+    transition: all .2s ease-in;
+    background: transparent;
+}
+
+.contact-container form textarea {
+    height: auto;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+.contact-container form textarea::placeholder {
+    font-weight: 400;
+}
+
+.contact-container form input::placeholder {
+    color: #6C6D6D;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all .2s ease-in;
+}
+
+.contact-container form input:focus {
+    border-bottom-color: rgb(253, 114, 28);
+}
+
+.contact-container form input:focus::placeholder {
+    color: rgb(199, 199, 199);
+}
+
+.contact-container form input:invalid {
+    border-bottom-color: rgb(255, 72, 72);
+}
+
+.contact-container form button {
+    font-size: 1.2rem;
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+    border: none;
+    background-color: #FF914D;
+    width: 50%;
+    margin: 0 auto;
+    /* padding: 10px; */
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.2);
+    transition: all .2s ease-in;
+}
+
+.contact-container form button:hover {
+    filter: brightness(110%);
+}
+
+.contact-container form button:focus {
+    filter: brightness(100%);
+    box-shadow: 0px 2px 8px rgba(50, 50, 50, 0.4);
+    outline: none;
+}
+
+.contact-container form input[name=nome] {
+    width: 60%;
+}
+
+.contact-container form input[name=telefone] {
+    width: 30%;
+    margin-left: auto;
+}
+
+.contact-container form input[name=email] {
+    width: 100%;
+}
+
+.contact-container form input[name=empresa] {
+    width: 45%;
+}
+
+.contact-container form input[name=area-atuacao] {
+    width: 45%;
+    margin-left: auto;
+}
+
+.contact-container form input[name=assunto] {
+    width: 100%;
+}
+
+.contact-container form input[name=mensagem] {
+    width: 100%;
+}
+
+.contact-container form textarea {
+    width: 100%;
+    max-height: 200px;
+}
+
+@media (max-width: 830px) {
+    #contato {
+        height: auto;
+    }
+
+    #contato .logo-detail {
+        top: -15%;
+        left: -220%;
+    }
+
+    .contact-container form {
+        width: 90%;
+    }
+
+    .contact-container form input {
+        width: 100%!important;
+        margin-bottom: 30px;
+    }
+
+    .contact-container form button {
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 80%;
+    }
+    
+    .contact-companies {
+        align-items: center;
+    }
+
+    .contact-companies p {
+        margin-left: auto;
     }
 }

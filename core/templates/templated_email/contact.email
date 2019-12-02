@@ -1,0 +1,15 @@
+{% block subject %}
+[{{empresa}}] {{assunto}}
+{% endblock %}
+
+{% block html %}
+    <p>Nome: {{nome}}</p>
+    <p>Empresa: {{empresa}}</p>
+    <p>Área de atuação: {{area_atuacao}}</p>
+    <p>Email: {{email}}</p>
+    <p>Telefone: {{telefone}}</p>
+    <br>
+    <p>Assunto: <strong>{{assunto}}</strong></p>
+    <br>
+    <p>{{mensagem}}</p>
+{% endblock %}
