@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import environ
 import os
+import django_heroku
 
 # Setting Django .env files
 environ.Env.read_env()
@@ -149,3 +150,6 @@ EMAIL_PORT = 587
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = env('EMAIL_HOST_ACCOUNT')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+
+# Activate Django-Heroku
+django_heroku.settings(locals())
