@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import environ
 import os
+import django_heroku
 
 # Setting Django .env files
 environ.Env.read_env()
@@ -126,6 +127,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# Activate Django-Heroku
+django_heroku.settings(locals())
 
 # Media files
 
