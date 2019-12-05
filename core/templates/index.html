@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{% static '/css/global.css' %}">
     <link rel="stylesheet" href="{% static '/css/main.css' %}">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static '/js/slick/slick.css' %}"/>
 
 {% endblock %}
 
@@ -16,6 +18,9 @@
 <!-- Bloco de conteúdo da página -->
 {% block CONTENT %}
 
+    <div class="preloader">
+        <img src="{% static 'logo/logo_laranja.png' %}" alt="Logo preloader">
+    </div>
     <div class="container">
         {% include "sections/navbar.html" %}
         {% include "sections/banner.html" %}
@@ -31,7 +36,11 @@
 <!-- Block para inserir scripts -->
 {% block SCRIPTS %}
 
-    <script src="{% static '/js/utils/utils.js' %}"></script>
-    <script src="{% static '/js/main.js' %}"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="{% static '/js/slick/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/js/utils/parallax.js' %}"></script>
+    <script type="text/javascript" src="{% static '/js/utils/utils.js' %}"></script>
+    <script type="text/javascript" src="{% static '/js/main.js' %}"></script>
 
 {% endblock %}

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import environ
 import os
+import django_heroku
 
 # Setting Django .env files
 environ.Env.read_env()
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'solo.apps.SoloAppConfig',
     'core.apps.CoreConfig',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -126,10 +128,19 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+# Activate Django-Heroku
+django_heroku.settings(locals())
+
 # Media files
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Dropbox Config
+
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
+DROPBOX_TIMEOUT = 100
 
 #Templated email config
 
