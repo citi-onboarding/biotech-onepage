@@ -19,6 +19,18 @@ $(document).ready(function () {
         draggable: false,
     });
 
+    $('.carousel__stage').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        draggable: false,
+    });
+
     $(".slick-next").empty();
     $(".slick-prev").empty();
 
