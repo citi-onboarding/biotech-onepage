@@ -61,8 +61,8 @@
 .card-mvv p {
     color: #6C6D6D;
     font-size: 1.2rem;
-    width: 65%;
-    text-align: justify;
+    width: 80%;
+    text-align: left;
     text-justify: inter-word;
     line-height: 1.5rem;
 }

@@ -71,7 +71,7 @@ window.addEventListener('scroll', () => {
     let currentScrollPos = window.pageYOffset;
 
     if(currentScrollPos > 30){
-        nav.style.backgroundColor = 'black';
+        nav.style.backgroundColor = 'rgb(0, 0, 0, 1)';
         nav.style.height = '70px';
         logo.style.transform = 'scale(0.8)';
         dropdown.style.top = '0px';
