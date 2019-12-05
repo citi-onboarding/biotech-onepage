@@ -1,18 +1,50 @@
-<section class="container-servicos">
-    <div class="circle-carrossel">
-        <div class="circle">
-            <div class="dot" id="dot1"></div>
-            <div class="dot" id="dot2"></div>
-            <div class="dot" id="dot3"></div>
-        </div>
-        <div class="carrossel">
-            <h2>Serviço 1</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit velit quibusdam minima natus, itaque tempora voluptas iure laboriosam, ipsam, debitis quas commodi possimus hic fuga. A, eius voluptas! Non, officia.</p>
-            <div class="setas">
-                <a class="left"><</a>
-                <a class="right">></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Serviços</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="text">
+        <div class="circulo-total">
+            <img id="engrenagem-carrossel" src="assets\img\nova_logo_cinza-03-removebg-preview2.png">
+            <div class="icone">
+                <img id="icone-img" src="assets\img\information.png"> 
             </div>
         </div>
-        <img>
+        <section class="carousel">
+            
+            <!-- Esses inputs adicionavam Ids que serviam de ponteiro entre os itens, mas, dessa forma, fixavam a quantidade de slides no carrossel. Iremos setar as Ids com Django (no for). -->
+            
+            <input type="radio" name="carousel" id="carousel1" checked="checked" />
+            <input type="radio" name="carousel" id="carousel2" />
+            <input type="radio" name="carousel" id="carousel3" />
+            <input type="radio" name="carousel" id="carousel4" />
+            <input type="radio" name="carousel" id="carousel5" />
+           
+            <main class="carousel__stage">
+                <aside class="carousel__item">      
+                    <h2>Serviço 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
+                    <label for="carousel1" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel2" class="carousel__next" onclick="rotateNext()"></label>
+                </aside>
+            </main>
+        </section>
     </div>
-</section>
+    <img id="engrenagem-fundo"  src="assets\img\nova_logo_cinza-03-removebg-preview.png">
+</body>
+<script>
+function rotateNext(){
+    var img = document.getElementById("engrenagem-carrossel");
+    img.setAttribute("class", "rotated-image-next");
+}
+function rotatePrev(){
+    var img = document.getElementById("engrenagem-carrossel");
+    img.setAttribute("class", "rotated-image-prev");
+}
+</script>
+</html>

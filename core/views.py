@@ -19,6 +19,13 @@ class IndexView(TemplateView):
 
         return context
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+    
+        context["servicos"] = Servicos.objects.get()
+
+        return context
+
 def send_email(request):
     if request.method == 'POST':
         nome = request.POST.get('nome')
