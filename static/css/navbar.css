@@ -1,26 +1,39 @@
 nav {
-    background-color: rgb(0, 0, 0);
-    position: fixed;
-    width: 100vw;
-    height: 70px;
     display: flex;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 30;
+    width: 100%;
+    height: 100px;
+    transition: background, height .2s ease-in;
+}
+
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
-nav #logo-navbar {
+
+#logo-navbar {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-left: 3em;
 }
-nav #logo-navbar img {
+
+#logo-navbar img {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
-    width: 5em;
+    width: 30vw;
+    max-width: 120px;
+    min-width: 80px;
+    animation: width .4s ease-in;
 }
-nav .categorias {
+
+.categorias {
     position: absolute;
     display: flex;
     list-style: none;
@@ -31,15 +44,16 @@ nav .categorias {
     justify-content: center;
     align-items: center;
     right: 0;
-    padding-right: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-nav .categorias li {
+
+.categorias li {
    padding-left: 5em;
 }
-nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+
+.categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
     float: right;
     display: block;
     text-align: center;
@@ -47,44 +61,56 @@ nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
     cursor: pointer;
     color: white;
 }
+
 .categorias li #inicioNav:hover, #sobreNosNav:hover, #servicosNav:hover, #contatoNav:hover {
     transition: 0.4s;
     color: orangered; /*mudar para laranja correto*/
 }
+
 #menu-barras {
     cursor: pointer;
     float: right;
+    margin-right: 5vw;
 }
+
 #menu-barras #dropdown {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.993);
     color: white;
     overflow: hidden;
     right: -100p;
-    z-index: 10;
+    z-index: 4;
     padding: 1em;
-    width: 20vw;
+    /* margin-right: 5%; */
+    width: 50vw;
     right: 0;
+    top: -30px;
     position: absolute;
     display: none;
-    height: 50vh;
+    opacity: 0;
+    height: 100vh;
     min-width: 200px;
+    transition: opacity .3s ease-in;
 }
+
 #menu-barras #dropdown li {
     list-style: none;
     padding: 1em;
-    background-color: black;
     color: white;
-
+    text-align: right;
 }
+
 #menu-barras #dropdown ul li a {
     text-decoration: none;
     list-style: none;
     color: white;
+    font-size: 1.2rem;
 }
+
 #menu-barras #dropdown ul li a:hover {
     transition: 0.4s;
     color: orangered; /*mudar para laranja correto*/
 }
+
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
@@ -92,7 +118,10 @@ nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
     border-radius: 1px;
     margin: 6px 0;
     transition: 0.4s;
+    z-index: 40;
+    position: relative;
 }
+
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
@@ -106,84 +135,139 @@ nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
+
 .change #dropdown {
     display: block!important;
 }
-@media only screen and (max-width: 800px) {
-    nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+
+.change ul {
+    position: absolute;
+    bottom: 10vh;
+    right: 0;
+    width: 100%;
+}
+
+.menu-social-network img {
+    width: 100%;
+    max-width: 25px;
+    margin-left: 10px;
+}
+
+/* Smartphones General ---------------- */
+@media only screen
+and (max-width: 599px){
+    .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
         display: none;
     }
-}
-@media only screen and (max-width: 800px) {
+
     .bar1, .bar2, .bar3 {
         display: block;
     }
 }
-@media only screen and (min-width: 800px) {
+
+
+/* Smartphones P (portrait) ---------------- */
+@media only screen 
+and (max-width : 330px){
+    #menu-barras #dropdown ul li a {
+        font-size: 1.2rem;
+    }
+    
+    .menu-social-network img {
+        max-width: 25px;
+    }    
+}
+
+/* Smartphones M (portrait) ---------------- */
+@media only screen 
+and (min-width : 331px)
+and (max-width : 399px){
+    
+}
+
+/* Smartphones L (portrait) ---------------- */
+@media only screen 
+and (min-width : 400px)
+and (max-width : 599px){
+    #menu-barras #dropdown ul li a {
+        font-size: 1.6rem;
+    }
+    
+    .menu-social-network img {
+        max-width: 30px;
+    } 
+}
+
+/* Iphone X */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        #menu-barras #dropdown ul li a {
+            font-size: 1.6rem;
+        }
+        
+        .menu-social-network img {
+            max-width: 30px;
+        }  
+}
+
+/* Tablets ---------------- */
+
+/* Tablet Portrait */
+@media only screen 
+and (min-device-width: 600px)
+and (max-device-width: 1200px) 
+and (orientation : portrait){
+    .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+        display: none;
+    }
+
+    .bar1, .bar2, .bar3 {
+        display: block;
+    }
+
+    #menu-barras #dropdown ul li a {
+        font-size: 2.5rem;
+    }
+    
+    .menu-social-network img {
+        max-width: 40px;
+    }  
+}
+
+/* Tablet Landscape */
+@media only screen 
+and (min-device-width: 600px)
+and (max-device-width: 1200px) 
+and (orientation : landscape){
     .bar1, .bar2, .bar3 {
         display: none;
         transition: 0ms;
     }
 }
-footer {
-    background-color: #3A3A3A;
-    color: white;
-    top: 100%;
-    width: 100vw;
-    overflow: hidden;
-    position: absolute;
+
+/* iPad Pro Portrait ------------------ */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-height: 1366px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+        display: block;
+    }
+
+    .bar1, .bar2, .bar3 {
+        display: none;
+    }
 }
-#cinza {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 2em;
-    width: 100%;
-    flex-wrap: wrap;
-}
-#cinza h2 {
-    color: #4DBBFF;
-    font-size: 1em;
-    padding-bottom: 1em;
-}
-#cinza p {
-    width: 15em;
-    font-size: 0.8em;
-    word-wrap: break-word;
-    height: 2em;
-}
-#cinza ul li {
-    list-style: none;
-    word-wrap: break-word;
-}
-#cinza .endereco, .informacoes, .conecte {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-}
-#cinza .logo-footer img {
-    width: 11em;
-    padding: 1em 2em 2em 0em;
-}
-.text-img {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-bottom: 0.5em;
-}
-.text-img img {
-    float: left;
-    margin-right: 10px;
-}
-.engrenagem {
-    position: absolute;
-    animation: gira 15s linear infinite;
-    top: 0;
-    right: -15%;
-    opacity: 10%;
-}
-@keyframes gira {
-    to {
-        transform: rotate(-360deg);
+
+/* Desktops ------------------ */
+
+@media only screen 
+and (min-width : 1201px){
+    .bar1, .bar2, .bar3 {
+        display: none;
+        transition: 0ms;
     }
 }
