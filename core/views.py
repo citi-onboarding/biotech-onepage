@@ -14,7 +14,8 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        
+            
+        context["servicos"] = Servicos.objects.all()
         context["mvv"] = MVV.objects.get()
         context["banner"] = Banner.objects.all()
 

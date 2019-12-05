@@ -69,14 +69,14 @@
     min-height: 100%;
 }
 
-.slick-slider {
+#banner .slick-slider {
     -webkit-user-select: text!important;
     -khtml-user-select: text!important;
     -moz-user-select: text!important;
     -ms-user-select: text!important;
     user-select: text!important;
 }
-.slick-list.draggable {
+#banner .slick-list.draggable {
     -webkit-user-select: none!important;
     -khtml-user-select: none!important;
     -moz-user-select: none!important;
@@ -84,12 +84,12 @@
     user-select: none!important;
 }
 
-.slick-track{
+#banner .slick-track{
     width: 100%;
     height: 100vh;
   }
 
-.slick-dots{
+#banner .slick-dots{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -103,7 +103,7 @@
     z-index: 5;
 }
 
-.slick-dots button{
+#banner .slick-dots button{
     -webkit-appearance: none;
     width: 50px;
     height: 6px;
@@ -118,23 +118,23 @@
     outline: none;
 }
 
-.slick-active button{
+#banner .slick-active button{
     -webkit-appearance: none;
     background-color: #4DBBFF;
     transform: scale(1.1);
     box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.4);
 }
 
-.slick-arrow {
+#banner .slick-arrow {
     bottom: 16%;
     transition: all .2s ease-in;
 }
 
-.slick-arrow:hover {
+#banner .slick-arrow:hover {
     filter: sepia(200%);
 }
 
-.slick-next {
+#banner .slick-next {
     right: 10%;
     position: absolute;
     height: 30px;
@@ -150,7 +150,7 @@
     cursor: pointer;
 }
 
-.slick-prev{
+#banner .slick-prev{
     right: 15%;
     position: absolute;
     height: 30px;
@@ -166,7 +166,7 @@
     cursor: pointer;
 }
 
-.slick-slider .slick-list {
+#banner .slick-slider .slick-list {
     width: 100%;
 }
 
@@ -185,13 +185,13 @@ and (max-width: 1024px){
         font-size: 25px;
     }
 
-    .slick-dots{
+    #banner .slick-dots{
         bottom: 12%;
         right: 50%;
         transform: translateX(50%);
     }
 
-    .slick-dots button{
+    #banner .slick-dots button{
         width: 60px;
         height: 10px;
         border: none;
@@ -226,13 +226,13 @@ and (orientation : portrait){
         min-height: 100%;
     }
 
-    .slick-dots{
+    #banner .slick-dots{
         bottom: 12%;
         right: 50%;
         transform: translateX(50%);
     }
     
-    .slick-dots button{
+    #banner .slick-dots button{
         width: 40px;
         height: 7px;
         border: none;
@@ -241,7 +241,7 @@ and (orientation : portrait){
         outline: none;
     }
 
-    .slick-arrow {
+    #banner .slick-arrow {
         display: none!important;
     }
 }
@@ -308,13 +308,13 @@ and (orientation : portrait){
         min-height: 100%;
     }
 
-    .slick-dots{
+    #banner .slick-dots{
         bottom: 14%;
         right: 50%;
         transform: translateX(50%);
     }
     
-    .slick-dots button{
+    #banner .slick-dots button{
         width: 50px;
         height: 7px;
         border: none;
@@ -323,7 +323,7 @@ and (orientation : portrait){
     }
 
     
-    .slick-arrow {
+    #banner .slick-arrow {
         display: none!important;
     }
 }
