@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Serviços</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+{% load static %}
+<section class="servicos">
     <div class="text">
         <div class="circulo-total">
             <img id="engrenagem-carrossel" src="assets\img\nova_logo_cinza-03-removebg-preview2.png">
@@ -24,19 +16,43 @@
             <input type="radio" name="carousel" id="carousel3" />
             <input type="radio" name="carousel" id="carousel4" />
             <input type="radio" name="carousel" id="carousel5" />
-           
+            
             <main class="carousel__stage">
                 <aside class="carousel__item">      
                     <h2>Serviço 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <label for="carousel1" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel5" class="carousel__prev" onclick="rotatePrev()"></label>
                     <label for="carousel2" class="carousel__next" onclick="rotateNext()"></label>
+                </aside>
+                <aside class="carousel__item">      
+                    <h2>Serviço 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
+                    <label for="carousel1" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel3" class="carousel__next" onclick="rotateNext()"></label>
+                </aside>
+                <aside class="carousel__item">      
+                    <h2>Serviço 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
+                    <label for="carousel2" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel4" class="carousel__next" onclick="rotateNext()"></label>
+                </aside>
+                <aside class="carousel__item">      
+                    <h2>Serviço 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
+                    <label for="carousel3" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel5" class="carousel__next" onclick="rotateNext()"></label>
+                </aside>
+                <aside class="carousel__item">      
+                    <h2>Serviço 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
+                    <label for="carousel4" class="carousel__prev" onclick="rotatePrev()"></label>
+                    <label for="carousel1" class="carousel__next" onclick="rotateNext()"></label>
                 </aside>
             </main>
         </section>
     </div>
     <img id="engrenagem-fundo"  src="assets\img\nova_logo_cinza-03-removebg-preview.png">
-</body>
+</section>
 <script>
 function rotateNext(){
     var img = document.getElementById("engrenagem-carrossel");
@@ -47,4 +63,4 @@ function rotatePrev(){
     img.setAttribute("class", "rotated-image-prev");
 }
 </script>
-</html>
+

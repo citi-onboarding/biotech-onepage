@@ -1,14 +1,14 @@
-html, body {
+/* html, .servicos {
     width: 98%;
     height: 95%;
     background: #363636;
     display: flex;
     font-size: 16px;
     flex-direction: row-reverse;
-  }
-  body {
+  } */
+  .servicos {
     left: 50%;
-    position: absolute;
+    position: relative;
     transform: translateX(-50%);
     overflow: hidden;
     display: flex;
@@ -63,13 +63,12 @@ html, body {
     position: relative;
   }
   .rotated-image-next {
-    -webkit-transform: rotate(72deg);
-    transform: rotate(72deg);
+    transform: rotate(45deg);
      transition-duration: 1s;
   
   }
   .rotated-image-prev {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
     transition-duration: 1s;
   }
   .carousel input {

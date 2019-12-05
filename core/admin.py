@@ -4,3 +4,4 @@ from core.models import *
 
 # Register your models here.
 admin.site.register(MVV, SingletonModelAdmin)
+admin.site.register(Servicos)
