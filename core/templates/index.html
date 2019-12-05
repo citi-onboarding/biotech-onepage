@@ -18,6 +18,9 @@
 <!-- Bloco de conteúdo da página -->
 {% block CONTENT %}
 
+    <div class="preloader">
+        <img src="{% static 'logo/logo_laranja.png' %}" alt="Logo preloader">
+    </div>
     <div class="container">
         {% include "sections/navbar.html" %}
         {% include "sections/banner.html" %}

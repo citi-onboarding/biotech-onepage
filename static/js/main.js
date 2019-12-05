@@ -2,9 +2,26 @@
 $(document).ready(function () {
     console.log('Made with 💻 and 💚 by CITi');
 
+    document.querySelector('.preloader').style.opacity = 0;
+    setTimeout(() => {
+        document.querySelector('.preloader').style.display = 'none';
+    }, 200);
+
     $('#banner-carousel').slick({
         arrows: true,
         dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000,
+        draggable: false,
+    });
+
+    $('.carousel__stage').slick({
+        arrows: true,
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
@@ -66,7 +83,7 @@ window.addEventListener('scroll', () => {
     let currentScrollPos = window.pageYOffset;
 
     if(currentScrollPos > 30){
-        nav.style.backgroundColor = 'black';
+        nav.style.backgroundColor = 'rgb(0, 0, 0, 1)';
         nav.style.height = '70px';
         logo.style.transform = 'scale(0.8)';
         dropdown.style.top = '0px';

@@ -18,7 +18,7 @@
     position: absolute;
     top: -10%;
     left: -20%;
-    opacity: 0.04;
+    opacity: 0.08;
     height: 135%;
     pointer-events: none;
     animation: logo-animation 60s infinite linear;
@@ -80,12 +80,16 @@
 
 .partners {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .partners img{
-    width: 100%;
-    max-width: 60px;
+    display: block;
+    max-width: 50px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .contact-container form {
@@ -217,8 +221,9 @@
     }
 
     #contato .logo-detail {
-        top: -15%;
-        left: -220%;
+        top: 0%;
+        left: -80%;
+        height: 60%;
     }
 
     .contact-container form {
