@@ -1,0 +1,189 @@
+nav {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+nav #logo-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 3em;
+}
+nav #logo-navbar img {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 5em;
+}
+nav .categorias {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    /* color: white; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    padding-right: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .categorias li {
+   padding-left: 5em;
+}
+nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.categorias li #inicioNav:hover, #sobreNosNav:hover, #servicosNav:hover, #contatoNav:hover {
+    transition: 0.4s;
+    color: orangered; /*mudar para laranja correto*/
+}
+#menu-barras {
+    cursor: pointer;
+    float: right;
+}
+#menu-barras #dropdown {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    right: -100p;
+    z-index: 10;
+    padding: 1em;
+    width: 20vw;
+    right: 0;
+    position: absolute;
+    display: none;
+    height: 50vh;
+    min-width: 200px;
+}
+#menu-barras #dropdown li {
+    list-style: none;
+    padding: 1em;
+    background-color: black;
+    color: white;
+
+}
+#menu-barras #dropdown ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+#menu-barras #dropdown ul li a:hover {
+    transition: 0.4s;
+    color: orangered; /*mudar para laranja correto*/
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+.change #dropdown {
+    display: block!important;
+}
+@media only screen and (max-width: 800px) {
+    nav .categorias li #inicioNav, #sobreNosNav, #servicosNav, #contatoNav {
+        display: none;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bar1, .bar2, .bar3 {
+        display: block;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .bar1, .bar2, .bar3 {
+        display: none;
+        transition: 0ms;
+    }
+}
+footer {
+    background-color: #3A3A3A;
+    color: white;
+    top: 100%;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+}
+#cinza {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#cinza h2 {
+    color: #4DBBFF;
+    font-size: 1em;
+    padding-bottom: 1em;
+}
+#cinza p {
+    width: 15em;
+    font-size: 0.8em;
+    word-wrap: break-word;
+    height: 2em;
+}
+#cinza ul li {
+    list-style: none;
+    word-wrap: break-word;
+}
+#cinza .endereco, .informacoes, .conecte {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+#cinza .logo-footer img {
+    width: 11em;
+    padding: 1em 2em 2em 0em;
+}
+.text-img {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 0.5em;
+}
+.text-img img {
+    float: left;
+    margin-right: 10px;
+}
+.engrenagem {
+    position: absolute;
+    animation: gira 15s linear infinite;
+    top: 0;
+    right: -15%;
+    opacity: 10%;
+}
+@keyframes gira {
+    to {
+        transform: rotate(-360deg);
+    }
+}
