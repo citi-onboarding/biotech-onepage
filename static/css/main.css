@@ -1,3 +1,4 @@
+
 /* #######  BANNER ######### */
 #banner {
     width: 100%;
@@ -283,6 +284,9 @@ and (max-width: 1024px){
     }
 }
 
+@import "navbar.css";
+@import "footer.css";
+@import "servicos.css";
 /* #######  SOBRE ######### */
 
 #sobre {
