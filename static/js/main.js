@@ -2,6 +2,11 @@
 $(document).ready(function () {
     console.log('Made with 💻 and 💚 by CITi');
 
+    document.querySelector('.preloader').style.opacity = 0;
+    setTimeout(() => {
+        document.querySelector('.preloader').style.display = 'none';
+    }, 200);
+
     $('#banner-carousel').slick({
         arrows: true,
         dots: true,
