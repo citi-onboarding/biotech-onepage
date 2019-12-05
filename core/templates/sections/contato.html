@@ -1,0 +1,31 @@
+{% load static %}
+<section id="contato">
+        <img  class="logo-detail" src="{% static 'logo/logo-cinza.png' %}" alt="">
+        <h2>Contato</h2>
+        <div class="line-detail"></div>
+        <div class="contact-container">
+            <div class="contact-companies">
+                <img src="{% static 'logo/novalogo-04.png' %}" alt="Logo Biotech">
+                <p>Parceiros:</p>
+                <div class="partners">
+                    <img src="{% static 'logo/logo_empresa_biotech.png' %}" alt="">
+                    <img src="{% static 'logo/logo_empresa_biotech.png' %}" alt="">
+                    <img src="{% static 'logo/logo_empresa_biotech.png' %}" alt="">
+                    <img src="{% static 'logo/logo_empresa_biotech.png' %}" alt="">
+                </div>
+            </div>
+            <form method="post" action="/contact/">
+                {% csrf_token %}
+                <input placeholder="Nome" type="text" name="nome" autocomplete="off">
+                <input placeholder="Telefone" type="tel" name="telefone" autocomplete="off">
+                <input placeholder="E-mail" type="email" name="email" autocomplete="off">
+                <input placeholder="Nome da Empresa" type="text" name="empresa" autocomplete="off">
+                <input placeholder="Área de Atuacao" type="text" name="area-atuacao" autocomplete="off">
+                <input placeholder="Assunto" type="text" name="assunto" autocomplete="off">
+     
+                <textarea placeholder="Mensagem" name="mensagem" rows='4'></textarea>
+        
+                <button class="botao" type="submit">Enviar</button>
+            </form>
+        </div>
+</section>

@@ -1,0 +1,54 @@
+.container-servicos {
+    background-color: rgb(54, 54, 54);
+    /* top: 20%; */
+    /* width: 100vw; */
+    /* position: absolute; */
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.carrossel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50%;
+    margin-right: 15%;
+    margin-bottom: 8em;
+    margin-top: 8em;
+    color: white;
+}
+.carrossel h2 {
+    color: #4DBBFF;
+    margin-bottom: 1em;
+}
+.carrossel p {
+    margin-bottom: 1em;
+}
+.setas {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+.setas .left {
+    margin-right: 4em;
+    cursor: pointer;
+}
+.setas .right {
+    cursor: pointer;
+}
+.circle {
+    border-style: solid;
+    position: absolute;
+    width: 15em;
+    height: 15em;
+    right: 55%;
+    border-radius: 50%;
+    border-color: white;
+    border-width: 5px;
+}
+.circle-carrossel {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}

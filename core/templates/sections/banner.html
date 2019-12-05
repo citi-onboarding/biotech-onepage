@@ -1,0 +1,34 @@
+{% load static %}
+<section id="banner">
+    <div id="banner-carousel">
+        <!-- {% for banner_item in banner %}
+            <div class="banner-carousel-item">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h1>banner_item.banner_titulo</h1>
+                        <p>banner_item.banner_descricao</p>
+                    </div>
+                    <img src="{{banner_item.banner_image}}" alt="">
+                </div>
+            </div>
+        {% endfor %} -->
+        <div class="banner-carousel-item">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h1>Biossegurança</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolorem vero perferendis aut hic</p>
+                </div>
+                <img src="{% static 'img/biotecnologia-101.png' %}" alt="">
+            </div>
+        </div>
+        <div class="banner-carousel-item">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h1>Biossegurança</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolorem vero perferendis aut hic</p>
+                </div>
+                <img src="{% static 'img/Biotecnologia-–-Sinônimo-de-inovação-na-indústria-de-remédios.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</section>

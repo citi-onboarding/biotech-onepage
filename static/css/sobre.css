@@ -1,0 +1,96 @@
+#sobre {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    background-color: white;
+    margin: -20px auto;
+    text-align: center;
+    align-items: center;
+    padding: 70px 0;
+    box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.2);
+    position: relative;
+    z-index: 20;
+}
+
+#sobre > .line-detail {
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+#sobre h2 {
+    color: #6C6D6D;
+    font-size: 2rem;
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+.mvv-cards-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-mvv {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    min-width: 200px;
+}
+
+.card-mvv img {
+    width: 100%;
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+
+.card-mvv h3 {
+    color: #FF914D;
+    font-size: 1.8rem;
+    font-family: 'League Spartan', 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+.line-detail {
+    width: 80%;
+    height: 6px;
+    background-image: radial-gradient(#6C6D6D, #a0a0a000, transparent);
+    margin-bottom: 10px;
+}
+
+.card-mvv p {
+    color: #6C6D6D;
+    font-size: 1.2rem;
+    width: 65%;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    #sobre {
+        padding-bottom: 30px;
+    }
+
+    #sobre > .line-detail {
+        margin-bottom: 40px;
+    }
+
+    .card-mvv {
+        margin-bottom: 25px;
+    }
+    
+    .card-mvv img {
+        width: 100%;
+        max-width: 100px;
+        margin-bottom: 10px;
+    }    
+
+    .line-detail {
+        margin-bottom: 13px;
+    }
+
+    .card-mvv p {
+        width: 80%;
+    }
+}

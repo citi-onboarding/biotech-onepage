@@ -1,0 +1,54 @@
+{% load static %}
+<nav id="nav">
+    <div class="nav-container">
+        <a id="logo-navbar" href="#banner"> <img src="{% static 'img/Logo_Branca1.png' %}"> </a>
+        <ul class="categorias">
+            <li>
+                <a href="#banner" id="inicioNav">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" id="sobreNosNav">Sobre nós</a>
+            </li>
+            <li>
+                <a href="#servicos" id="servicosNav">Serviços</a>
+            </li>
+            <li>
+                <a href="#contato" id="contatoNav">Contato</a>
+            </li>
+            <li>
+                <div id="menu-barras">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>  
+                    <div class="" id="dropdown">
+                        <ul>
+                            <li>
+                                <a href="#banner" id="inicioMenu">Início</a>
+                            </li>
+                            <li>
+                                <a href="#sobre" id="sobreNosMenu">Sobre nós</a>
+                            </li>
+                            <li>
+                                <a href="#servicos" id="servicosMenu">Serviços</a>
+                            </li>
+                            <li>
+                                <a href="#contato" id="contatoMenu">Contato</a>
+                            </li>
+                            <li class="menu-social-network">
+                                <a href="#">
+                                    <img src="{% static 'icons/facebook.png' %}" alt="ícone facebook">
+                                </a>
+                                <a href="#">
+                                    <img src="{% static 'icons/linkedin.png' %}" alt="ícone linkedin">
+                                </a>
+                                <a href="#">
+                                    <img src="{% static 'icons/instagram.png' %}" alt="ícone instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

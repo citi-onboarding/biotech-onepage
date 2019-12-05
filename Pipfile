@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "*"
+django-environ = "*"
+django-storages = "*"
+django-templated-email = "*"
+pillow = "*"
+django-solo = "*"
+dropbox = "*"
+
+[requires]
+python_version = "3.8"

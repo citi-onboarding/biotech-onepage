@@ -1,0 +1,27 @@
+{% load static %}
+<section id="sobre">
+    <h2>Sobre nós</h2>
+    <div class="line-detail"></div>
+    <div class="mvv-cards-container">
+        <div class="card-mvv">
+            <img src="{% static 'icons/missao.png' %}" alt="Ícone missão">
+            <h3>Missão</h3>
+            <div class="line-detail"></div>
+            <p>{{mvv.missao_texto}}</p>
+        </div>
+        
+        <div class="card-mvv">
+            <img src="{% static 'icons/visao.png' %}" alt="Ícone visão">
+            <h3>Visão</h3>
+            <div class="line-detail"></div>
+            <p>{{mvv.visao_texto}}</p>
+        </div>
+        
+        <div class="card-mvv">
+            <img src="{% static 'icons/valor.png' %}" alt="Ícone valor">
+            <h3>Valores</h3>
+            <div class="line-detail"></div>
+            <p>{{mvv.valor_texto}}</p>
+        </div>
+    </div>
+</section>
