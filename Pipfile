@@ -7,6 +7,12 @@ verify_ssl = true
 
 [packages]
 django = "*"
+django-environ = "*"
+django-storages = "*"
+django-templated-email = "*"
+pillow = "*"
+django-solo = "*"
+dropbox = "*"
 
 [requires]
 python_version = "3.8"

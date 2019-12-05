@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'solo.apps.SoloAppConfig',
     'core.apps.CoreConfig',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,12 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Dropbox Config
+
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = env('DROPBOX_OAUTH2_TOKEN')
+DROPBOX_TIMEOUT = 100
 
 #Templated email config
 
