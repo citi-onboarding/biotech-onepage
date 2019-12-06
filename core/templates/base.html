@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="Engenharia, Biomédica, UFPE, MEJ, Empresa, Júnior, BioTech, Consultoria">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#ff914d">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'icons/favicon.ico' %}">
+
+    <!-- Bloco para inserir tags meta específicas, links e outro elementos do template-->
+    {% block CUSTOM_HEAD %}
+    {% endblock %}
+
+    <title>BioTech Consultoria</title>
+    <!-- <link rel="shortcut icon" href={% static '' %} type="image/x-icon"> -->
+    <!-- TODO: Inserir ícone -->
+  </head>
+
+  <body>
+    {% block CONTENT %} 
+    {% endblock %} 
+    
+    {% block SCRIPTS %}
+    {% endblock %}
+  </body>
+</html>

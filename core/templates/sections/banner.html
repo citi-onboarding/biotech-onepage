@@ -1,0 +1,16 @@
+{% load static %}
+<section id="banner">
+    <div id="banner-carousel">
+        {% for banner_item in banner %}
+            <div class="banner-carousel-item">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h1>{{banner_item.banner_titulo}}</h1>
+                        <p>{{banner_item.banner_descricao}}</p>
+                    </div>
+                    <img src="{{banner_item.banner_image.url}}" alt="">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
