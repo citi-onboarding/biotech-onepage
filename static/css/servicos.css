@@ -39,7 +39,6 @@
   }
   .text {
     width: 50%;
-    height: -webkit-fill-available;
     /* margin-top: 7em; */
     align-items: center;
     display: flex;

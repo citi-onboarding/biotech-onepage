@@ -18,7 +18,6 @@ class IndexView(TemplateView):
         context["servicos"] = Servicos.objects.all()
         context["mvv"] = MVV.objects.get()
         context["banner"] = Banner.objects.all()
-
         return context
 
 def send_email(request):

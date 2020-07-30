@@ -18,36 +18,13 @@
             <input type="radio" name="carousel" id="carousel5"/>
             
             <main class="carousel__stage">
-                <div class="carousel__item">      
-                    <h2>Serviço 1</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <!-- <label for="carousel1" class="carousel__prev" onclick="rotatePrev()"></label> -->
-                    <!-- <label for="carousel1" class="carousel__next" onclick="rotateNext()"></label> -->
-                </div>
-                <div  class="carousel__item">      
-                    <h2>Serviço 2</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <!-- <label for="carousel1" class="carousel__prev" onclick="rotatePrev()"></label> -->
-                    <!-- <label for="carousel3" class="carousel__next" onclick="rotateNext()"></label> -->
-                </div>
-                <div class="carousel__item">      
-                    <h2>Serviço 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <!-- <label for="carousel2" class="carousel__prev" onclick="rotatePrev()"></label> -->
-                    <!-- <label for="carousel4" class="carousel__next" onclick="rotateNext()"></label> -->
-                </div>
-                <div  class="carousel__item">      
-                    <h2>Serviço 4</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <!-- <label for="carousel3" class="carousel__prev" onclick="rotatePrev()"></label> -->
-                    <!-- <label for="carousel5" class="carousel__next" onclick="rotateNext()"></label> -->
-                </div>
-                <div class="carousel__item">      
-                    <h2>Serviço 5</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ipsum perspiciatis, vero tempora blanditiis minima explicabo nostrum ab ad, aliquam sed necessitatibus, in architecto ratione assumenda doloremque magni voluptas unde?</p>
-                    <!-- <label for="carousel4" class="carousel__prev" onclick="rotatePrev()"></label> -->
-                    <!-- <label for="carousel1" class="carousel__next" onclick="rotateNext()"></label> -->
-                </div>
+                {% for servico_item in servicos %}
+                    <div class="carousel__item">      
+                        <h2>{{servico_item.servico_tipo}}</h2>
+                        <p>{{servico_item.servico_descricao}}</p>
+                        <label for="carousel1" class="carousel__next" onclick="rotateNext()"></label>
+                    </div>
+                {% endfor %}
             </main>
         </section>
     </div>
